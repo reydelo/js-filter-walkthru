@@ -14,5 +14,6 @@ $('button').on('click', function(){
   });
   var upperLimit = $(this).data('val');
   var range = getRanges(upperLimit);
-  getValues(range, domValues);
+  newValue = getValues(range, domValues);
+  $('#filtered-values').html('<li>' + newValue.join("</li><li>") + '</li>');
 })
